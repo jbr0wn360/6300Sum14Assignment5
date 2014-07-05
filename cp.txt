@@ -1,0 +1,30 @@
+# From String
+
+  Length:
+    0.                        [property zerovalue]
+    1.
+    size - 1.
+    size + 1.
+    size*2.
+    size*2 - 1.
+    size*2 + 1.
+    
+
+  Content:
+    alphanumeric characters.  	[if !zerovalue]
+    special characters.       	[if !zerovalue]
+    spaces.                   	[if !zerovalue]
+
+  Presence of enclosing quotes:
+      Not enclosed.		[if !zerovalue]
+      Enclosed.
+      Incorrect.		[error]
+
+
+# To String
+
+  Value:
+    0.
+    >0.
+    <0.                       [error]
+    maxint.                   [single]
